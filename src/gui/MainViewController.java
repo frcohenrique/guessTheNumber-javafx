@@ -3,6 +3,7 @@ package gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import gui.utils.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -33,10 +34,15 @@ public class MainViewController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		
+		initializeNodes();
 		
 	}
 	
 	public void initializeNodes() {
+		
+		Constraints.setTextFieldMax(txtNumberInput, 3);
+		Constraints.setTextFieldToInteger(txtNumberInput);
+		
 		
 	}
 
